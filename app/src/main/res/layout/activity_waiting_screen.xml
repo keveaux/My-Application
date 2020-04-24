@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.WaitingScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_waiting"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/space20"
+        android:layout_marginEnd="@dimen/space20"
+        android:layout_marginTop="@dimen/space40"
+        android:contentDescription="@string/todo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:layout_marginTop="@dimen/space20"
+       >
+        <TextView
+            android:id="@+id/sweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/pending_verification"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/space10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Hey Kevin we see you've completed your application we are working hard to activate your account. We will contact you through 0715353311 within 30 minutes"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_below="@id/sweet"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/contact_us_btn"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/contact_us"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:backgroundTint="@color/white"
+            android:layout_marginTop="@dimen/space20"
+            android:layout_marginRight="@dimen/space40"
+            android:layout_marginLeft="@dimen/space40"
+            android:layout_marginBottom="@dimen/space20"
+            android:layoutDirection="rtl"
+            app:icon="@drawable/ic_phone_black_18dp"
+            app:iconGravity="start"
+            app:iconTint="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="2dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

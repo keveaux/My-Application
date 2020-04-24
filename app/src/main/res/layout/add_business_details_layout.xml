@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/business_details_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    <com.ict_life.merchantapp.widgets.RoundedImageView
+        android:id="@+id/add_business_details_prof_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/bottomLayout"
+        android:layout_alignParentStart="true"
+        android:padding="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="-40dp"
+        android:background="@drawable/white_circle_layout"
+        android:src="@drawable/silhoutte"
+        android:scaleType="centerCrop"
+        >
+
+    </com.ict_life.merchantapp.widgets.RoundedImageView>
+
+
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/topLayout">
+
+            <TextView
+                android:id="@+id/setup_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space40"/>
+
+            <TextView
+                android:id="@+id/tv_provide_detes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please provide us with some information about your business"
+                android:layout_marginStart="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/space10"/>
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space10"
+
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space10"
+                android:layout_marginEnd="@dimen/space10"
+                android:layout_marginBottom="@dimen/space40"
+                android:layout_marginTop="@dimen/space5"
+                app:cardCornerRadius="@dimen/space20"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/location_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="@dimen/space20"
+                            android:layout_marginStart="@dimen/space20"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/ic_location_on_black_18dp"
+                            android:drawablePadding="@dimen/space5"
+                            android:textSize="@dimen/size13"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/address_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_marginEnd="@dimen/space20"
+                            android:textSize="12sp"
+                            android:layout_marginTop="@dimen/space5"
+                            app:layout_constraintTop_toBottomOf="@id/location_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_goneMarginStart="@dimen/space10"
+                            android:text="Choose your business location"
+                            android:paddingStart="@dimen/space5"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey"
+                            />
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/map_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:layout_constraintTop_toBottomOf="@id/address_tv"
+                            android:layout_marginTop="@dimen/space10"
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_marginEnd="@dimen/space20"
+                            android:visibility="gone"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/add_location_cv"
+                            android:layout_width="@dimen/space40"
+                            android:layout_height="@dimen/space40"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:cardCornerRadius="@dimen/space20"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginEnd="@dimen/space10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:tint="@color/black"
+                                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"
+                            app:layout_constraintTop_toBottomOf="@id/map_view"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="@dimen/space20"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/services_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Services/Products"
+                            android:layout_marginTop="@dimen/space20"
+                            android:layout_marginStart="@dimen/space20"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/service_product_icon"
+                            android:drawablePadding="@dimen/space5"
+                            android:textSize="@dimen/size13"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/space20"
+                            android:textSize="12sp"
+                            android:layout_marginTop="@dimen/space5"
+                            android:layout_below="@id/services_tv"
+                            android:text="What services or products do you provide "
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_toLeftOf="@id/add_service_btn"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey"
+
+                            />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/add_service_btn"
+                            android:layout_width="@dimen/space40"
+                            android:layout_height="@dimen/space40"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:cardCornerRadius="@dimen/space20"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/space10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:tint="@color/black"
+                                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"
+                            android:layout_below="@id/tv_services"
+                            android:layout_marginTop="@dimen/space20"
+                            />
+
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/kind_of_business_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kind of business"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="@dimen/space20"
+                            android:layout_marginStart="@dimen/space20"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/business_icon"
+                            android:drawablePadding="@dimen/space5"
+                            android:textSize="@dimen/size13"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_kind_of_business"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_marginEnd="@dimen/space20"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:layout_marginTop="@dimen/space5"
+                            app:layout_constraintTop_toBottomOf="@id/kind_of_business_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_goneMarginStart="@dimen/space10"
+                            android:text="What category is your business "
+                            android:paddingStart="@dimen/space5"
+                            android:layout_marginBottom="@dimen/space20"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey"
+
+                            />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/add_kind_of_biz_cv"
+                            android:layout_width="@dimen/space40"
+                            android:layout_height="@dimen/space40"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:cardCornerRadius="@dimen/space20"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginEnd="@dimen/space10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:tint="@color/black"
+                                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

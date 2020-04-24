@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space10"
+    android:layout_marginEnd="@dimen/space10"
+    android:layout_marginTop="@dimen/space5"
+    android:layout_marginBottom="@dimen/space5"
+    app:cardCornerRadius="@dimen/space10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ict_life.merchantapp.widgets.RoundedImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/plumber"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/space10"
+            android:visibility="gone"
+            android:background="@drawable/circle_layout_accent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:text="M"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile_pic"
+            android:layout_marginTop="@dimen/space10"
+
+            >
+            <TextView
+                android:id="@+id/employee_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space5"
+                android:text="Miriam Makeba"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_dot"
+                android:layout_toRightOf="@id/employee_name_tv"
+                android:layout_marginStart="@dimen/space5"
+                android:layout_centerVertical="true"
+                android:paddingTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/reviews_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="active"
+                android:textColor="@color/green"
+                android:layout_marginStart="@dimen/space5"
+                android:layout_toEndOf="@id/dot"
+                android:textSize="@dimen/size13"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/employee_role_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile_pic"
+            android:layout_marginStart="@dimen/space5"
+            android:layout_marginTop="@dimen/space5"
+            android:text="Employee"
+            android:textSize="@dimen/size13"
+            android:layout_below="@id/name_layout"
+            />
+
+        <TextView
+            android:id="@+id/employee_pno_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile_pic"
+            android:layout_marginStart="@dimen/space5"
+            android:layout_marginTop="@dimen/space5"
+            android:text="+254715354455"
+            android:textSize="@dimen/size13"
+            android:layout_below="@id/employee_role_tv"
+            android:layout_marginBottom="@dimen/space10"
+            />
+
+        <ImageButton
+            android:id="@+id/delete_employee_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_black_18dp"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space10"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

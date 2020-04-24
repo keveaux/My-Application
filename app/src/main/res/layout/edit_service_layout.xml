@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scroll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/customprogressbar"
+        android:progress="0"
+        android:layout_marginStart="@dimen/space20"
+        android:layout_marginEnd="@dimen/space20"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/space20"
+        />
+
+    <TextView
+        android:id="@+id/progress_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar1"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_marginStart="@dimen/space20"
+        android:layout_marginEnd="@dimen/space20"
+        android:text="For better searching by users please add at least 6 business keywords "
+        android:textColor="@color/black"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tags_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space10"
+        android:layout_below="@id/progress_txt"
+        android:layout_marginTop="@dimen/space10"
+        />
+
+    <ImageButton
+        android:id="@+id/add_btn"
+        android:layout_width="@dimen/space40"
+        android:layout_height="@dimen/space40"
+        android:src="@drawable/ic_add_white_24dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tags_rv"
+        android:layout_marginTop="@dimen/space30"
+        android:layout_marginEnd="@dimen/space20"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_business_name_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_toStartOf="@id/add_btn"
+        android:layout_below="@id/tags_rv"
+
+
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_services_et"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/service_product_icon"
+            android:drawablePadding="@dimen/space10"
+            android:textSize="16sp"
+            android:hint="Add keywords"
+            android:lines="1"
+            android:inputType="text"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:textColorHint="@color/colorAccent"
+            app:backgroundTint="@color/colorAccent"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:imeOptions="actionSend"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/finish_adding_tags_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:textColor="@color/colorPrimary"
+        app:iconGravity="textStart"
+        android:drawablePadding="@dimen/space10"
+        android:textStyle="bold"
+        android:layout_below="@id/edit_business_name_til"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_alignParentEnd="true"
+        android:text="@string/finish"
+        android:layout_marginEnd="@dimen/space10"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        android:textColor="@color/grey"
+        app:iconGravity="textStart"
+        android:drawablePadding="@dimen/space10"
+        android:textStyle="bold"
+        android:layout_below="@id/edit_business_name_til"
+        android:layout_marginTop="@dimen/space20"
+        android:text="@string/cancel"
+        android:layout_marginEnd="@dimen/space10"
+        android:layout_toStartOf="@id/finish_adding_tags_btn"
+        />
+
+</RelativeLayout>
+</ScrollView>

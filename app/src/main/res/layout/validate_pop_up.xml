@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_payment_method"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginLeft="@dimen/space10"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space20"
+        android:text="Request Sent"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/size13"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space10"
+        android:text="We've sent 1 shilling to your account ,please enter the transaction code below to validate your business"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginTop="@dimen/space20"
+
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/space10"
+            android:textSize="13sp"
+            android:hint="Transaction Code"
+            android:lines="1"
+            android:inputType="number"
+            app:backgroundTint="@color/black"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/validate_pop_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="VALIDATE"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:drawableLeft="@drawable/ic_keyboard_arrow_right_white_18dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginBottom="@dimen/space40"
+        android:layoutDirection="rtl"
+        />
+
+</LinearLayout>

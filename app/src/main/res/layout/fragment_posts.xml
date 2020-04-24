@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#50D3D2D2"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/add_images_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:animateLayoutChanges="true"
+            android:background="#50D3D2D2"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_new_post_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textColor="@color/colorPrimary"
+                app:icon="@drawable/ic_add_to_photos_black_24dp"
+                app:iconGravity="textStart"
+                android:drawablePadding="@dimen/space10"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/change_from_grid_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_grid_on_black_24dp"
+                app:iconGravity="textStart"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:visibility="gone"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/change_to_grid_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_icon_square"
+                app:iconGravity="textStart"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posts_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2.5dp"
+        android:layout_below="@id/topLayout"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout"
+
+        >
+    <RelativeLayout
+        android:id="@+id/illustration_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/illustration"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_posts"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space40"/>
+
+        <TextView
+            android:id="@+id/setup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make your first post"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/illustration"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let your customers see what you got!"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/setup_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space10"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/make_post_btn"
+            android:layout_width="150dp"
+            android:layout_height="54dp"
+            android:text="@string/add_post"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            android:paddingStart="@dimen/space20"
+            android:paddingEnd="@dimen/space20"
+            android:layout_marginTop="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginLeft="@dimen/space20"
+            android:layoutDirection="rtl"
+            android:layout_below="@id/tv"
+            android:layout_centerHorizontal="true"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/see_post_example_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/see_example"
+            android:textStyle="bold"
+            android:layout_below="@id/make_post_btn"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginBottom="@dimen/space40"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
+
+
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ManageEmployeesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?android:attr/actionBarSize"
+        app:titleTextColor="@android:color/transparent"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="My Employees"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+               />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/add_employees_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:onClick="OpenAddEmployeesActivity"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/space10"
+                android:src="@drawable/ic_add_white_24dp"/>
+        </RelativeLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_employees_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:listitem="@layout/employees_list_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:layout_marginTop="@dimen/space5"
+
+        />
+
+   <LinearLayout
+       android:id="@+id/empty_list_layout"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/toolbar"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:src="@drawable/ic_empty"
+           android:layout_gravity="center"
+           android:layout_weight="1"
+           android:layout_margin="@dimen/space20"/>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/text"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="You have no existing kindOfBusinesses"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="@dimen/space20"/>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/add_employees_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="50dp"
+               android:background="@color/colorPrimary"
+               android:text="ADD EMPLOYEES"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:layout_centerHorizontal="true"
+               android:layout_below="@id/text"
+               android:layout_marginTop="@dimen/space40"
+               android:layout_marginBottom="@dimen/space20"
+               android:paddingStart="@dimen/space10"
+               android:paddingEnd="@dimen/space10"
+               android:onClick="OpenAddEmployeesActivity"
+               />
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow">
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <RelativeLayout
+                android:id="@+id/image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/space20"
+                android:background="@drawable/white_circle_layout"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_user_astronaut"/>
+            </RelativeLayout>
+
+            <com.ict_life.merchantapp.widgets.RoundedImageView
+                android:id="@+id/profile_pic_iv"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/space20"
+                android:scaleType="centerCrop"
+                />
+
+            <RelativeLayout
+                android:id="@+id/upload_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_toRightOf="@id/image"
+                android:layout_marginTop="-36dp"
+                android:layout_marginStart="-36dp"
+                android:background="@drawable/upload_profile_layout">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_cloud_upload"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload logo"
+                android:textColor="@color/white"
+                android:layout_below="@id/upload_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginBottom="@dimen/space20"/>
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/illustration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_illust_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space30"/>
+
+        <TextView
+            android:id="@+id/setup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup Business Profile Photo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/illustration"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Increase your trust profile by adding a photo "
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/setup_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space10"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

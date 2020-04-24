@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_marginRight="@dimen/space10"
+        android:layout_marginBottom="@dimen/space10"
+        app:cardCornerRadius="@dimen/space20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_one"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/review_tv"
+                android:layout_marginStart="@dimen/space20"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_two"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/review_tv"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_toEndOf="@id/image_one"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_tv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginBottom="@dimen/space10"
+                android:layout_toEndOf="@+id/name_initials_layout"
+                android:numStars="5"
+                android:rating="4"
+                android:stepSize="1" />
+
+            <RelativeLayout
+                android:id="@+id/name_initials_layout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/space20"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginEnd="@dimen/space10"
+                android:background="@drawable/circle_layout_accent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="M"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/send_reply_layout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/btn_reply_review"
+                android:layout_margin="@dimen/space20"
+                android:background="@drawable/reply_layout"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/reply_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_toStartOf="@+id/send_btn"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:hint="@string/reply"
+                    android:paddingStart="@dimen/space20"
+                    android:paddingEnd="@dimen/space20"
+                    android:textSize="@dimen/size13" />
+
+                <ImageButton
+                    android:id="@+id/send_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/space10"
+                    android:layout_marginStart="@dimen/space10"
+                    android:background="@null"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_send_button" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/replies_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_reply_review"
+                android:layout_margin="@dimen/space20"
+                android:background="@drawable/replies_layout"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:text="@string/you"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size13" />
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space20"
+                    android:text="13/12/2019"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size13" />
+
+                <TextView
+                    android:id="@+id/merchant_review_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_tv"
+                    android:layout_marginStart="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:textSize="@dimen/size13" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delete_review"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space40"
+                    android:layout_below="@id/merchant_review_txt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space10"
+                    android:text="@string/delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size13"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_delete_black_18dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_toEndOf="@+id/name_initials_layout"
+                android:text="Miriam Makeba"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shout_out_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_bar"
+                android:layout_toEndOf="@id/name_initials_layout"
+                android:drawableLeft="@drawable/ic_clap"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Jimmy"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginEnd="@dimen/space20"
+                android:text="25 mins ago"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/review_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shout_out_tv"
+                android:layout_marginStart="@dimen/space20"
+                android:layout_marginTop="@dimen/space10"
+                android:text="Great beer, great food. It’s a must to visit. Located in the downtown of Bucharest, Universitatii Plaza, it has a … "
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reply_review"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_below="@id/image_one"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginBottom="@dimen/space10"
+                android:text="@string/reply"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/size13"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_reply"
+                app:iconTint="@color/grey"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

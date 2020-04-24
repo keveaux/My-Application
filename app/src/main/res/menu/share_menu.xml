@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/share_to_facebook"
+        android:icon="@drawable/ic_facebook"
+        android:title="Facebook" />
+    <item android:id="@+id/share_to_whatsapp"
+        android:icon="@drawable/ic_whatsapp"
+        android:title="Whatsapp"
+        />
+    <item android:id="@+id/share_to_instagram"
+        android:icon="@drawable/ic_instagram"
+        android:title="Instagram"
+        />
+</menu>

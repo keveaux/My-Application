@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/info_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.InfoFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/space20"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_marginRight="@dimen/space10"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_marginBottom="@dimen/space10">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/business_building"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_business_building"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_weight="10"
+                android:layout_marginStart="@dimen/space10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/business_description_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="@dimen/space20"
+                    android:text="@string/business_name"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/business_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="5dp"
+                    android:text="Maasai Mara"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/edit_business_description"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space40"
+                android:src="@drawable/ic_mode_edit_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:layout_weight="10"
+                android:tint="@color/green"
+                android:background="@null"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_on_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_weight="10"
+                android:layout_marginStart="@dimen/space10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="@dimen/space20"
+                    android:text="@string/location_txt"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textSize="@dimen/size13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/location_example"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/grey"/>
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space10"/>
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/edit_business_location"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_mode_edit_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:layout_weight="10"
+                android:background="@null"
+                android:tint="@color/green"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/service_product_icon"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_weight="10"
+                android:layout_marginStart="@dimen/space10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="@dimen/space20"
+                    android:text="@string/service_product"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textSize="@dimen/size13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/product_service_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/service_example"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/edit_business_sevice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space40"
+                android:src="@drawable/ic_mode_edit_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:layout_weight="10"
+                android:background="@null"
+                android:tint="@color/green"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:src="@drawable/business_icon"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_weight="10"
+                android:layout_marginStart="@dimen/space10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="@dimen/space20"
+                    android:text="@string/kind_of_business"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textSize="@dimen/size13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/kind_of_biz_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/business_example"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/edit_business_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_mode_edit_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:layout_weight="10"
+                android:background="@null"
+                android:tint="@color/green"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/space40">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/contact_info_icon"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_weight="10"
+                android:layout_marginStart="@dimen/space10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="@dimen/space20"
+                    android:text="@string/contact_information"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textSize="@dimen/size13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/contact_info_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/pno_example"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size13"
+                    android:layout_marginEnd="@dimen/space10"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/edit_business_contact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space40"
+                android:src="@drawable/ic_mode_edit_black_18dp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginEnd="@dimen/space20"
+                android:layout_weight="10"
+                android:background="@null"
+                android:tint="@color/green"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.core.widget.NestedScrollView>

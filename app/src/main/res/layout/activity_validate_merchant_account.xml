@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:layout_marginBottom="@dimen/space40">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/validate_business"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/space20"
+            android:textColor="@color/black"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/shop"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/validate_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center|top"
+                android:layout_marginLeft="@dimen/space20"
+                android:layout_marginRight="@dimen/space20"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/send_money_selected_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginTop="@dimen/space30"
+            android:layout_marginBottom="@dimen/space40">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space20"
+                    android:gravity="center"
+                    android:text="@string/send_money_selected"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space10"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/phone_no_et"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="@string/please_enter_phone_number"
+                        android:lines="1"
+                        android:inputType="phone"
+                        app:backgroundTint="@color/black"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/space20">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_button_phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/cancel"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/white"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="@dimen/space20"
+                        android:textSize="12sp"
+
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/validate_phone_no_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/validate"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/space20"
+                        android:layout_marginEnd="@dimen/space10"
+                        android:textSize="12sp"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/paybill_selected_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginTop="@dimen/space30"
+            android:layout_marginBottom="@dimen/space40"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space20"
+                    android:gravity="center"
+                    android:text="@string/paybill_selected"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space10"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/paybill_name_et"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="@string/please_enter_paybill_name"
+                        android:lines="1"
+                        android:inputType="number"
+                        app:backgroundTint="@color/black"
+
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/paybill_no_et"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="@string/please_enter_paybill_number"
+                        android:lines="1"
+                        android:inputType="number"
+                        app:backgroundTint="@color/black"
+
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/account_no_et"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="@string/please_enter_account_number"
+                        android:lines="1"
+                        android:inputType="textEmailAddress"
+                        app:backgroundTint="@color/black"
+
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/space20">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_button_paybill"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/cancel"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/white"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="@dimen/space20"
+                        android:textSize="12sp"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/validate_paybill_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/validate"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:layout_marginStart="@dimen/space10"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/buy_goods_selected_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginTop="@dimen/space30"
+            android:layout_marginBottom="@dimen/space40">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_marginEnd="@dimen/space20"
+                    android:gravity="center"
+                    android:text="@string/buy_goods_selected"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space10"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginTop="@dimen/space10"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_till_no"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="@string/please_enter_till_number"
+                        android:lines="1"
+                        android:inputType="textEmailAddress"
+                        app:backgroundTint="@color/black"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginBottom="@dimen/space10"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_till_no_name"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space10"
+                        android:textSize="13sp"
+                        android:hint="Please enter till name"
+                        android:lines="1"
+                        android:inputType="textEmailAddress"
+                        app:backgroundTint="@color/black"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/space20">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_button_buy_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/cancel"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:backgroundTint="@color/white"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="@dimen/space20"
+                        android:textSize="12sp"
+
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/validate_buy_goods_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="@string/validate"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:layout_marginStart="@dimen/space10"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:id="@+id/select_payment_method_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/buy_goods_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="@dimen/space20"
+                android:layout_marginRight="@dimen/space20"
+                android:layout_marginTop="@dimen/space30"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lipa_na_mpesa_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:gravity="center"
+                        android:text="@string/buy_goods"
+                        android:layout_marginTop="@dimen/space10"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:text="@string/customers_pay_me_through_a_till_number"
+                        android:layout_marginTop="@dimen/space10"
+                        android:layout_marginBottom="@dimen/space20"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paybill_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="@dimen/space20"
+                android:layout_marginRight="@dimen/space20"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:gravity="center"
+                        android:text="@string/paybill"
+                        android:layout_marginTop="@dimen/space10"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:text="@string/customers_pay_me_through_paybill"
+                        android:layout_marginTop="@dimen/space10"
+                        android:layout_marginBottom="@dimen/space20"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/send_money_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="@dimen/space20"
+                android:layout_marginRight="@dimen/space20"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/space20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:gravity="center"
+                        android:text="@string/send_money"
+                        android:layout_marginTop="@dimen/space10"
+                        android:textColor="@color/colorPrimary"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:text="@string/customers_pay_me_through_my_phone_number"
+                        android:layout_marginTop="@dimen/space10"
+                        android:layout_marginBottom="@dimen/space20"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

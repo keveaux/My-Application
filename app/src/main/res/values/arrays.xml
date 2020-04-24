@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stars" >
+        <item>All</item>
+        <item>5 Star</item>
+        <item>4 Star</item>
+        <item>3 Star</item>
+        <item>2 Star</item>
+        <item>1 Star</item>
+    </string-array>
+
+    <string-array name="dates" >
+        <item>All</item>
+        <item>This Year</item>
+        <item>This Month</item>
+        <item>This Week</item>
+        <item>Today</item>
+
+    </string-array>
+
+    <string-array name="roles" >
+        <item>Employee</item>
+        <item>Owner</item>
+        <item>Admin</item>
+
+    </string-array>
+</resources>

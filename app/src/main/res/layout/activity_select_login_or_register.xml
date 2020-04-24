@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView_storefront"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none"
+    tools:ignore="RtlHardcoded">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_start_page"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ICTLIFE Merchant"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_marginLeft="@dimen/space40"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/space20"
+                app:srcCompat="@drawable/merchantimage"/>
+            <TextView
+                android:id="@+id/tv_motto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_logo"
+                android:layout_marginLeft="@dimen/space40"
+                android:layout_marginRight="@dimen/space40"
+                android:layout_marginTop="@dimen/space10"
+                android:text="Uniquely catering for all your merchant needs"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                />
+            <LinearLayout
+                android:id="@+id/ll_bottom2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:id="@+id/btn_log_in"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Base.TextAppearance.AppCompat.Widget.Button.Colored"
+                    android:id="@+id/btn_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/space20"
+                    android:layout_marginRight="@dimen/space20"
+                    android:layout_marginBottom="1dp"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

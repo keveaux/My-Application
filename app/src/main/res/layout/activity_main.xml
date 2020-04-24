@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        />
+
+    <RelativeLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/space10"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/cancel_banner_btn"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/space40"
+            android:src="@drawable/ic_clear_white_18dp"
+            android:tint="@color/black"
+            android:layout_centerVertical="true"
+            android:background="@null"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/progress_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cancel_banner_btn"
+                android:layout_centerVertical="true"
+                >
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="100"
+                    android:progress="50"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey Kevin!"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_toRightOf="@id/progress_bar_layout"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginStart="@dimen/space10"
+            android:textStyle="bold"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your seller profile is off to a great start just a few more steps and we're done"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_toRightOf="@id/progress_bar_layout"
+            android:layout_toLeftOf="@id/finish_btn"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_below="@id/name_tv"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finish_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/finish"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+        </RelativeLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@color/colorPrimary"
+        app:labelVisibilityMode="selected"
+        app:itemTextAppearanceActive="@style/BottomNavigation.ActiveItemTextAppearance"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

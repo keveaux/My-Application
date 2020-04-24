@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigation"
+        android:animateLayoutChanges="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skip_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="@color/grey"
+            android:text="@string/skip"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/space5"
+            android:layout_marginBottom="@dimen/space5"
+            />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+           />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/next_cv"
+            android:layout_width="@dimen/space40"
+            android:layout_height="@dimen/space40"
+            app:cardCornerRadius="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_keyboard_arrow_right_white_18dp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/previous_btn"
+            android:layout_width="@dimen/space40"
+            android:layout_height="@dimen/space40"
+            app:cardCornerRadius="@dimen/space10"
+            app:cardBackgroundColor="@color/black"
+            android:layout_toStartOf="@id/next_cv"
+            android:layout_marginRight="@dimen/space10"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_keyboard_arrow_left_white_18dp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_above="@id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager"/>
+</RelativeLayout>

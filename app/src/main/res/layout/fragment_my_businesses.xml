@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.MyBusinessesFragment"
+    android:paddingTop="@dimen/space5">
+
+    <RelativeLayout
+        android:id="@+id/add_business_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/first_letter_layout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/add_business_layout"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginBottom="@dimen/space5"
+            android:layout_marginStart="25dp">
+
+            <ImageView
+                android:id="@+id/first_letter_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:src="@drawable/ic_plus"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/business_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginStart="25dp"
+            android:text="Add Business"
+            android:textStyle="normal"
+            android:layout_toRightOf="@id/first_letter_layout"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_businesses_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/my_businesses_recycler_item"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/add_business_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/space10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

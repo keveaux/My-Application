@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/topLayout_cover_photo"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cover_photos_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/upload_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_cloud_upload"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload cover photos"
+                android:textColor="@color/white"
+                android:layout_below="@id/upload_iv"
+                android:layout_marginTop="@dimen/space10"
+                android:layout_marginBottom="@dimen/space20"
+                android:layout_centerHorizontal="true"
+              />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.ict_life.merchantapp.widgets.RoundedImageView
+        android:id="@+id/profile_pic_cover_layout_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/bottomLayout"
+        android:layout_alignParentStart="true"
+        android:padding="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="-40dp"
+        android:background="@drawable/white_circle_layout"
+        android:src="@drawable/silhoutte"
+        android:scaleType="centerCrop"
+        >
+
+    </com.ict_life.merchantapp.widgets.RoundedImageView>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLayout_cover_photo">
+
+        <ImageView
+            android:id="@+id/illustration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space40"/>
+
+        <TextView
+            android:id="@+id/setup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Cover Photos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/illustration"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add many photos to make a beautiful background"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/setup_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space10"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

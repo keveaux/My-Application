@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ValidateAccountActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validate Business"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/space20"
+        android:textColor="@color/black"
+
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/shop"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/validate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:gravity="center"
+            android:textColor="@color/black"
+
+            />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/lipa_na_mpesa_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginTop="@dimen/space20">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"/>
+
+        <TextView
+            android:id="@+id/lipa_na_mpesa_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:gravity="center"
+            android:text="Buy Goods"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/space20"
+
+            />
+
+        <ImageView
+            android:id="@+id/lipa_na_mpesa_down_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <ImageView
+            android:id="@+id/lipa_na_mpesa_chosen_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <RelativeLayout
+            android:id="@+id/lipa_na_mpesa_et_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lipa_na_mpesa_tv">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space40"
+                android:layout_marginRight="@dimen/space40"
+                android:layout_marginTop="@dimen/space20"
+
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_username"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space10"
+                    android:textSize="13sp"
+                    android:hint="Please enter till number"
+                    android:lines="1"
+                    android:inputType="textEmailAddress"
+                    app:backgroundTint="@color/black"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paybill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginTop="@dimen/space20">
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"/>
+
+        <TextView
+            android:id="@+id/paybill_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:gravity="center"
+            android:text="Paybill"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="@dimen/space20"
+
+            />
+
+        <ImageView
+            android:id="@+id/paybill_down_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <ImageView
+            android:id="@+id/paybill_chosen_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <RelativeLayout
+            android:id="@+id/paybill_et_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paybill_tv"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/business_no_et"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space40"
+                android:layout_marginRight="@dimen/space40"
+                android:layout_marginTop="@dimen/space20"
+
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space10"
+                    android:textSize="13sp"
+                    android:hint="Please enter business number"
+                    android:lines="1"
+                    android:inputType="number"
+                    app:backgroundTint="@color/black"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space40"
+                android:layout_marginRight="@dimen/space40"
+                android:layout_marginTop="@dimen/space20"
+                android:layout_below="@+id/business_no_et"
+
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space10"
+                    android:textSize="13sp"
+                    android:hint="Please enter account number"
+                    android:lines="1"
+                    android:inputType="textEmailAddress"
+                    app:backgroundTint="@color/black"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_money_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginTop="@dimen/space20">
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"/>
+
+        <TextView
+            android:id="@+id/send_money_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:gravity="center"
+            android:text="Send Money"
+            android:layout_below="@id/view3"
+            android:layout_marginTop="@dimen/space20"
+
+            />
+
+        <ImageView
+            android:id="@+id/phone_number_down_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view3"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <ImageView
+            android:id="@+id/phone_number_chosen_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_below="@id/view3"
+            android:layout_marginTop="@dimen/space20"/>
+
+        <RelativeLayout
+            android:id="@+id/send_money_et_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/send_money_et"
+            android:visibility="gone"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space40"
+                android:layout_marginRight="@dimen/space40"
+                android:layout_marginTop="@dimen/space20"
+
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/space10"
+                    android:textSize="13sp"
+                    android:hint="Please enter phone number"
+                    android:lines="1"
+                    android:inputType="number"
+                    app:backgroundTint="@color/black"
+
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginTop="@dimen/space20"
+            android:layout_below="@id/send_money_et_layout"/>
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/validate_button"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="VALIDATE"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginBottom="@dimen/space40"
+        android:layoutDirection="rtl"
+        />
+
+
+</LinearLayout>
+</ScrollView>

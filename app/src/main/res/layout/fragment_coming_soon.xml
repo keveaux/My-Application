@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FC"
+    android:orientation="vertical"
+    >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:id="@+id/layout_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <RelativeLayout
+                        android:id="@+id/upper_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:id="@+id/iv_logo_head"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:src="@mipmap/logo_head"
+                            android:layout_marginStart="@dimen/space10"
+                            android:tint="#FFFFFF"
+                            android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_logo_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/space5"
+                            android:layout_toEndOf="@+id/iv_logo_head"
+                            android:layout_toRightOf="@+id/iv_logo_head"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="ICTLIFE"
+                            android:layout_centerInParent="true"/>
+
+                        <ImageView
+                            android:id="@+id/settings_iv"
+                            android:layout_width="25dp"
+                            android:layout_height="@dimen/space30"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_settings"
+                            android:background="@null"
+                            android:tint="@color/white"
+                            android:layout_marginEnd="@dimen/space10"
+                            android:layout_centerInParent="true"
+                            />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_profile_pic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="@dimen/space10"
+                        android:layout_below="@id/upper_layout"
+                        android:layout_centerHorizontal="true">
+
+                        <com.ict_life.merchantapp.widgets.RoundedImageView
+                            android:id="@+id/iv_profile_pic"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/plumber"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_profile_pic"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/space10"
+                        android:text="Thomas Sankara"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_merchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_profile_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/space5"
+                        android:layout_marginBottom="@dimen/space10"
+                        android:text="4 Businesses"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"/>
+
+
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            android:layout_marginTop="1dp"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="?actionBarSize"
+                     />
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tabLayout" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/name_initials_layout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10"
+            android:background="@drawable/circle_layout_accent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="S"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_and_comment_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_toEndOf="@+id/name_initials_layout"
+        android:textColor="#707070"
+        android:textSize="@dimen/size13"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/name_initials_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/space10"/>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space20"
+            android:layout_marginEnd="@dimen/space20"
+            android:text="25 mins ago"
+            android:textColor="@color/grey"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/name_and_comment_tv"
+            app:layout_constraintStart_toEndOf="@id/name_initials_layout"
+            android:layout_marginStart="@dimen/space10"/>
+
+        <LinearLayout
+            android:id="@+id/reply_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/time_tv"
+            app:layout_constraintStart_toEndOf="@id/name_initials_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/space20"
+            android:layout_marginStart="@dimen/space10"
+
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/space20"
+                >
+
+                <ImageButton
+                    android:id="@+id/like_comment_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_like"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/no_of_likes_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

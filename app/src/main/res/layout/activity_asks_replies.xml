@@ -1,0 +1,206 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?android:attr/actionBarSize"
+        app:titleTextColor="@android:color/transparent"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#20ffffff"
+            android:fitsSystemWindows="true">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expandedTitleMarginStart="40dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/asks_details_cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardElevation="@dimen/space20"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space20"
+                        android:paddingTop="@dimen/space10"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/name_initials_layout"
+                            android:layout_width="@dimen/space40"
+                            android:layout_height="@dimen/space40"
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_marginTop="@dimen/space10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/circle_layout_accent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="M"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space10"
+                            android:layout_toEndOf="@+id/name_initials_layout"
+                            android:text="Miriam Makeba"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toEndOf="@id/name_initials_layout"
+                            android:textSize="@dimen/size13"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="@dimen/space10"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/looking_for"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/is_looking_for"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_toEndOf="@+id/name_tv"
+                            android:layout_marginTop="@dimen/space10"
+                            android:layout_marginStart="@dimen/space5"
+                            app:layout_constraintStart_toEndOf="@id/name_tv"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/asks_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="a plumber could you recommend any?"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_below="@id/name_tv"
+                            android:layout_toEndOf="@+id/name_initials_layout"
+                            app:layout_constraintTop_toBottomOf="@id/name_tv"
+                            app:layout_constraintStart_toEndOf="@id/name_initials_layout"
+                            android:layout_marginStart="@dimen/space10"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25 mins ago"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:layout_below="@id/asks_tv"
+                            android:layout_toEndOf="@+id/name_initials_layout"
+                            android:textColor="@color/grey"
+                            android:layout_marginBottom="@dimen/space20"
+                            android:layout_marginTop="@dimen/space10"
+                            android:layout_marginStart="@dimen/space10"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginEnd="@dimen/space20"
+
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/asks_tv"
+                            android:layout_marginTop="@dimen/space20"
+                            android:layout_marginStart="@dimen/space20"
+                            android:layout_marginEnd="@dimen/space20"
+                            android:background="@drawable/curved_tags_layout"
+                            android:paddingStart="@dimen/space10"
+                            android:paddingEnd="@dimen/space10"
+                            android:paddingTop="@dimen/space10"
+                            android:paddingBottom="@dimen/space20"
+
+                            >
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Natafuta Plumber mwenye anaweza ku-unblock drainage yangu ya bafu. If he can also replace the titles in the washrooms it would be a bonus."
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:layout_marginStart="@dimen/space10"
+                                android:textColor="@color/black"
+                                android:maxLines="2"
+                                />
+                        </RelativeLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="300dp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/asks_replies_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/asks_details_cv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/asks_replies_rv_layout"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="@dimen/space5"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space40">40dp</dimen>
+    <dimen name="space10">10dp</dimen>
+    <dimen name="space20">20dp</dimen>
+    <dimen name="space30">30dp</dimen>
+    <dimen name="space5">5dp</dimen>
+
+
+
+    <dimen name="size13">13sp</dimen>
+    <dimen name="size14">14sp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="editor_size">30dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="spacing_medium">10dp</dimen>
+
+</resources>

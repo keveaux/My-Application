@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_swap"
+        android:layout_marginTop="@dimen/space20"
+       />
+
+    <TextView
+        android:id="@+id/switch_to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space20"
+        android:layout_marginTop="@dimen/space20"
+        android:text="Switch to "
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space20"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/validate_pop_up_button"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="CANCEL"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:backgroundTint="@color/white"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/space20"
+            android:layout_marginEnd="@dimen/space20"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="SWITCH"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_right_white_18dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/space20"
+            android:layout_marginBottom="@dimen/space20"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,251 @@
+{
+  "project_info": {
+    "project_number": "99594612610",
+    "firebase_url": "https://ictlife-ke.firebaseio.com",
+    "project_id": "ictlife-ke",
+    "storage_bucket": "ictlife-ke.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:262fbc041571b8d37d299b",
+        "android_client_info": {
+          "package_name": "com.ict_life.merchantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:64c480f63aa351a8",
+        "android_client_info": {
+          "package_name": "com.ictlife.merchantapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:a6bafaececdba7d3",
+        "android_client_info": {
+          "package_name": "com.ictlife.merchantapp.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:6e4f23363ec5d7d9",
+        "android_client_info": {
+          "package_name": "com.ictlife.merchantapp.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:b56d7fdf759db3de7d299b",
+        "android_client_info": {
+          "package_name": "com.ictlife.messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-qvbjnohelv98o4s2hjv4v9k3kkoia1em.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ictlife.messaging",
+            "certificate_hash": "578ed70cffa28842b217be16365ac5cbe49b381e"
+          }
+        },
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:4c1562ab7f81a74a",
+        "android_client_info": {
+          "package_name": "com.ictlife.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:0bdac52b983ac59b",
+        "android_client_info": {
+          "package_name": "com.ictlife.userapp.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99594612610:android:fc000aadd068e6e1",
+        "android_client_info": {
+          "package_name": "com.ictlife.userapp.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpq7st9xTIsk8a2NincWSJSoZwrACiak0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99594612610-d98938fhaumpj4h475t2kvmtj9j4mahg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

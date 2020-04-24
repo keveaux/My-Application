@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/space5"
+    android:layout_marginTop="@dimen/space5"
+    android:layout_marginStart="@dimen/space10"
+    android:layout_marginEnd="@dimen/space10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/space10"
+        android:paddingBottom="@dimen/space20">
+
+
+        <RelativeLayout
+            android:id="@+id/name_initials_layout"
+            android:layout_width="@dimen/space40"
+            android:layout_height="@dimen/space40"
+            android:background="@drawable/circle_layout_accent"
+            android:layout_marginStart="@dimen/space10"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginEnd="@dimen/space10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:text="M"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Miriam Makeba"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_toEndOf="@+id/name_initials_layout"
+            android:layout_marginTop="@dimen/space10"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/looking_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/is_looking_for"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_toEndOf="@+id/name_tv"
+            android:layout_marginTop="@dimen/space10"
+            android:layout_marginStart="@dimen/space10" />
+
+        <TextView
+            android:id="@+id/asks_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a plumber could you recommend any?"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_below="@id/name_tv"
+            android:layout_toEndOf="@+id/name_initials_layout"
+            />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 mins ago"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:layout_below="@id/asks_tv"
+            android:layout_toEndOf="@+id/name_initials_layout"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="@dimen/space20"
+            android:layout_marginTop="@dimen/space10"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/reply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_tv"
+            android:orientation="horizontal"
+            android:layout_marginEnd="48dp"
+            android:layout_toEndOf="@id/name_initials_layout">
+
+
+            <LinearLayout
+                android:id="@+id/view_replies_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/replies_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chat"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/replies_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 replies"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reply_asks_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/recommend_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_reply"
+                    android:background="@null"
+                     />
+
+                <TextView
+                    android:id="@+id/recommend_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/space10"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/send_reply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_layout"
+            android:layout_toRightOf="@id/name_initials_layout"
+            android:layout_marginTop="@dimen/space20"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/cancel_button"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/recommend_myself_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/image_lotie_recommend"
+                        android:layout_width="@dimen/space30"
+                        android:layout_height="@dimen/space30"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="false"
+                        app:lottie_fileName="recommend.json"
+                        android:layout_gravity="center"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="centerInside"
+                        android:layout_centerVertical="true"
+                        android:padding="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/myself_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Myself"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space5"
+                        android:layout_toRightOf="@id/image_lotie_recommend"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recommend_other_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/other_iv"
+                        android:layout_width="@dimen/space20"
+                        android:layout_height="@dimen/space20"
+                        android:src="@drawable/ic_other"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/other_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_toRightOf="@id/other_iv"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorAccent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/space10"
+                android:layout_marginEnd="@dimen/space20" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

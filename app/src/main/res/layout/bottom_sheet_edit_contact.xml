@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="8dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_business_name_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space20"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_business_contact_et"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_phone_accent_18dp"
+            android:drawablePadding="@dimen/space10"
+            android:textSize="16sp"
+            android:hint="@string/edit_contact_information"
+            android:lines="1"
+            android:inputType="phone"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space20"
+            android:textColorHint="@color/colorAccent"
+            app:backgroundTint="@color/colorAccent"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/finish_editing_contact_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:textColor="@color/colorPrimary"
+        app:iconGravity="textStart"
+        android:drawablePadding="@dimen/space10"
+        android:textStyle="bold"
+        android:layout_below="@id/edit_business_name_til"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_alignParentEnd="true"
+        android:text="@string/finish"
+        android:layout_marginEnd="@dimen/space10"
+        android:layout_marginBottom="@dimen/space10"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        android:textColor="@color/grey"
+        app:iconGravity="textStart"
+        android:drawablePadding="@dimen/space10"
+        android:textStyle="bold"
+        android:layout_below="@id/edit_business_name_til"
+        android:layout_marginTop="@dimen/space20"
+        android:text="@string/cancel"
+        android:layout_marginEnd="@dimen/space10"
+        android:layout_toStartOf="@id/finish_editing_contact_btn"
+        />
+
+</RelativeLayout>

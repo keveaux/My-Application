@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space20"
+        android:paddingRight="@dimen/space20"
+        android:gravity="center_horizontal"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space20"
+            android:text="@string/welcome"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_sign_up_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_group" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/merchant"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/space20"
+            android:textColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space40"
+            android:text="@string/please_enter_your_phone_number"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+
+                >
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/space10"
+                    android:gravity="center"
+                    app:ccp_textSize="@dimen/size13"
+                    app:ccp_defaultCode="254" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_pno"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/space10"
+                    android:textSize="@dimen/size13"
+                    android:hint="@string/phone_number"
+                    android:lines="1"
+                    android:inputType="phone"
+                    android:background="@null"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:importantForAutofill="no"
+                    android:paddingStart="@dimen/space5"
+                    android:paddingEnd="@dimen/space5"
+                    />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/sign_in_button"
+                android:layout_width="200dp"
+                android:layout_height="54dp"
+                android:text="@string/continue_"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/space10"
+                android:layout_marginTop="@dimen/space40" />
+
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_terms_and_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space20"
+            android:text="@string/terms_and_conditions"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+</ScrollView>
+

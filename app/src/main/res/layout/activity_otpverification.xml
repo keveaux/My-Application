@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.OTPVerificationActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/verify_pno_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space40"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_sign_up_logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_group" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/merchant"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/space20"
+        android:textColor="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space20"
+            android:text="@string/waiting_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/space20"
+            android:layout_height="@dimen/space20"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/waiting"
+            android:layout_marginStart="@dimen/space10"/>
+    </RelativeLayout>
+
+
+    <com.ict_life.merchantapp.widgets.OtpEditText
+        android:id="@+id/et_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/space40"
+        android:layout_marginStart="@dimen/space20"
+        android:layout_marginEnd="@dimen/space20"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_new_post_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="54dp"
+        android:textAllCaps="false"
+        android:text="@string/resend_sms"
+        android:textSize="13sp"
+        android:textColor="@color/grey"
+        app:icon="@drawable/ic_comment_black_24dp"
+        app:iconGravity="start"
+        app:iconTint="@color/grey"
+        android:drawablePadding="@dimen/space20"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/space40"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/verify_otp_btn"
+        android:layout_width="200dp"
+        android:layout_height="54dp"
+        android:text="@string/confirm"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/space10"
+        android:layout_marginTop="@dimen/space40"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?android:attr/actionBarSize"
+        app:titleTextColor="@android:color/transparent"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/layout_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/toolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space10"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profile_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_manage_employees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space10"
+                    android:paddingBottom="@dimen/space10">
+
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/add_employees"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="@dimen/space10"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Manage Employees"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvCategorySubTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:textSize="13sp"
+                        android:paddingBottom="2dp"
+                        android:text="Add kindOfBusinesses who will help you manage your account"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_marginEnd="@dimen/space10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_security_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_cv"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space20"
+                    android:paddingBottom="@dimen/space10">
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Profile Settings"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/tvCategorySubTitle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginTop="4dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:textSize="13sp"
+                        android:text="Manage information about yourself E.g username and passwords"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator1"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon1"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle1" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_marginEnd="@dimen/space10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_web_sessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_security_pin"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingBottom="@dimen/space10"
+                    android:paddingStart="@dimen/space10"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/web"
+                        android:tint="#000"
+                        android:layout_marginStart="@dimen/space10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Web Sessions"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategorySubTitle2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space10"
+                        android:layout_marginEnd="@dimen/space20"
+                        android:layout_marginTop="4dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="13sp"
+                        android:text="View and Manage active sessions you have Linked to your account from other devices"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator2"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon2"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle2" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_marginEnd="@dimen/space10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_web_sessions"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space10"
+                    android:paddingBottom="@dimen/space10">
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/space10"
+                        android:src="@drawable/notification"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Notifications"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategorySubTitle3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:textSize="13sp"
+                        android:paddingBottom="2dp"
+                        android:text="Customise which notifications to receive (Followes, Likes, Asks, Posts, Comments)"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator3"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon3"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle3" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_marginEnd="@dimen/space10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_general_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_notification"
+                android:background="@android:color/transparent"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_asks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="General"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_general_title"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space10"
+                    android:paddingBottom="@dimen/space20">
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon4"
+                        android:layout_width="@dimen/space30"
+                        android:layout_height="@dimen/space30"
+                        android:src="@drawable/info"
+                        android:layout_marginStart="@dimen/space10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="About"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator4"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/space10"
+                        android:src="@drawable/ic_arrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_app_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_about"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space10"
+                    android:paddingBottom="@dimen/space10">
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon6"
+                        android:layout_width="@dimen/space30"
+                        android:layout_height="@dimen/space30"
+                        android:layout_marginStart="@dimen/space10"
+                        android:src="@drawable/feedback"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Send App Feedback"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategorySubTitle6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:textSize="13sp"
+                        android:text="Give us feedback"
+                        app:layout_constraintEnd_toStartOf="@id/layout_orange_indicator6"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon6"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle6" />
+
+                    <ImageView
+                        android:id="@+id/layout_orange_indicator6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/space10"
+                        android:src="@drawable/ic_arrow"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/layout_current_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_app_feedback"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginBottom="@dimen/space40">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:paddingTop="@dimen/space20"
+                    android:paddingStart="@dimen/space10"
+                    android:paddingBottom="@dimen/space10">
+
+                    <ImageView
+                        android:id="@+id/ivCategoryIcon5"
+                        android:layout_width="@dimen/space30"
+                        android:layout_height="@dimen/space30"
+                        android:layout_marginStart="@dimen/space10"
+                        android:src="@drawable/version"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryTitle5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Current Version"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_app_version_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:paddingBottom="2dp"
+                        android:text="Version 1.0"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon5"
+                        app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle5" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

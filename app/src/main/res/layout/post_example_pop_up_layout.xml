@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <ImageButton
+        android:id="@+id/dismiss_btn"
+        android:layout_width="@dimen/space40"
+        android:layout_height="@dimen/space40"
+        android:src="@drawable/ic_clear_white_18dp"
+        android:tint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/space10"
+        android:background="@null"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/post_example_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dismiss_btn"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_example_recyclerview"
+        android:layout_marginTop="@dimen/space5"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_left_white_18dp"
+            android:tint="@color/black"
+            />
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right_white_18dp"
+            android:tint="@color/black" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

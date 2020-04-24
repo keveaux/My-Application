@@ -1,0 +1,245 @@
+<resources>
+    <string name="app_name" translatable="false">ICTLifeMerchantApp</string>
+    <string name="validatetxt">&#160;to validate your business and fetch all your ICTLIFE reviews please indicate which MPESA method your clients mostly use to pay you</string>
+    <string name="home">Home</string>
+    <string name="one_last_thing">One last thing&#160;</string>
+    <string name="Messages" translatable="false">Chat</string>
+    <string name="Asks" translatable="false">Asks</string>
+    <string name="coming_soon">Coming Soon</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="fab">Maasai Mara</string>
+    <string name="todo">TODO</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_25" translatable="false">25</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_20" translatable="false">20</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="location_txt">Location</string>
+    <string name="location_example">Nairobi - Mombasa road near Jomo Kenyatta Airport. Vision Plaza Mombasa road 5th floor…</string>
+    <string name="service_product">Service/Product</string>
+    <string name="service_example">Safaris, Accommodation, Travel, Vacation</string>
+    <string name="kind_of_business">Kind of business</string>
+    <string name="business_example" translatable="false">National wildlife reserve</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="pno_example">0715353311</string>
+    <string name="overall_rating">Overall Rating</string>
+    <string name="rating_example">4.4</string>
+    <string name="reviews_example">23 reviews</string>
+    <string name="reply">Reply</string>
+    <string name="delete">Delete</string>
+    <string name="add_caption" translatable="false">Add Caption</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_post">New post</string>
+    <string name="finish">finish</string>
+    <string name="share_to">Share To</string>
+    <string name="facebook">FaceBook</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="instagram">Instagram</string>
+    <string name="business" translatable="false">Business</string>
+    <string name="personal">Personal</string>
+    <string name="follow_these_easy_steps">Follow these easy steps</string>
+    <string name="business_name" translatable="false">Business name</string>
+    <string name="business_user_name" translatable="false">Business user name</string>
+    <string name="next">Next</string>
+    <string name="last_step">Last Step</string>
+    <string name="full_name">Full name</string>
+    <string name="username">Username</string>
+    <string name="strength">strength</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="back" translatable="false">Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_signed_up" translatable="false">Already signed up?</string>
+    <string name="login">Login</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="folder_all">All Images</string>
+    <string name="preview">Preview</string>
+    <string name="msg_no_camera">No system camera found</string>
+    <string name="msg_amount_limit">You cannot select more than 10 images</string>
+    <string name="action_done" translatable="false">Done</string>
+    <string name="action_button_string" translatable="false">%1$s(%2$d/%3$d)</string>
+    <string name="photos_unit">Photos : %d</string>
+    <string name="photo_unit">Photo : %d</string>
+    <string name="no_photo_unit">No photo</string>
+    <string name="tip_take_photo">Take photo</string>
+    <string name="error_image_not_exist">Image error</string>
+    <string name="error_no_permission">Please grant permission</string>
+    <string name="permission_dialog_title">Permission Deny</string>
+    <string name="permission_dialog_ok">OK</string>
+    <string name="permission_dialog_cancel">CANCEL</string>
+    <string name="permission_rationale">Storage read permission is needed to pick files.</string>
+    <string name="permission_rationale_write_storage">Storage write permission is needed to save the image.</string>
+    <string name="edit">EDIT</string>
+    <string name="facebook_app_id">402743457055753</string>
+    <string name="description_example">Maasai Mara (Masai Mara) is situated in south-west Kenya and is one of Africa’s Greatest Wildlife Reserves. Together with the Serengeti National Park in Tanzania it forms Africa’s most diverse.</string>
+    <string name="edit_business_name">Edit business name</string>
+    <string name="cancel">CANCEL</string>
+    <string name="edit_contact_information">Edit contact information</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="resend_sms">Resend SMS</string>
+    <string name="welcome">Welcome!</string>
+    <string name="please_enter_your_phone_number">Please enter your phone number</string>
+    <string name="terms_and_conditions">By continuing you are agreeing to our\nterms and conditions</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="let_s_get_started">Let\'s get started!</string>
+    <string name="please_give_us_a_few_details_about_you_and_your_business">Please give us a few details about you and your business</string>
+    <string name="continue_">Continue</string>
+    <string name="you">You</string>
+    <string name="let_s_go">Let\'s GO</string>
+    <string name="skip">Skip</string>
+    <string name="buy_goods">Buy Goods</string>
+    <string name="paybill">Paybill</string>
+    <string name="maps_api_key">AIzaSyAYSXGyDBLHihTmPCU0658YQMBKsufmEPk</string>
+    <string name="label_brush">Brush</string>
+    <string name="label_emoji">Emoji</string>
+    <string name="label_sticker">Sticker</string>
+    <string name="label_eraser">Eraser</string>
+    <string name="label_eraser_mode">Eraser Mode</string>
+    <string name="label_text">Text</string>
+    <string name="label_filter">Filter</string>
+    <string name="label_adjust">Adjust</string>
+    <string name="msg_save_image">Are you sure want to exit without saving image ?</string>
+    <string name="edit_post">Edit Post</string>
+    <string name="show_less">Show less</string>
+    <string name="add_a_comment" translatable="false">Add a comment</string>
+    <string name="merchant">Merchant</string>
+    <string name="waiting_text">waiting to automatically detect an SMS</string>
+    <string name="contact_us">Contact us</string>
+    <string name="validate_business">Validate Business</string>
+    <string name="send_money_selected">Send Money Selected</string>
+    <string name="please_enter_phone_number">Please enter phone number</string>
+    <string name="validate">VALIDATE</string>
+    <string name="paybill_selected">Paybill Selected</string>
+    <string name="please_enter_paybill_number">Please enter paybill number</string>
+    <string name="please_enter_account_number">Please enter account number (optional)</string>
+    <string name="buy_goods_selected">Buy Goods Selected</string>
+    <string name="please_enter_till_number">Please enter till number</string>
+    <string name="customers_pay_me_through_a_till_number">Customers pay me through a till number</string>
+    <string name="customers_pay_me_through_paybill">Customers pay me through paybill</string>
+    <string name="send_money">Send Money</string>
+    <string name="customers_pay_me_through_my_phone_number">Customers pay me through my phone number</string>
+    <string name="pending_verification">PENDING VERIFICATION!</string>
+    <string name="is_looking_for">is looking for</string>
+    <string name="color">Color</string>
+    <string name="font">font</string>
+    <string name="text_size">Text Size</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="Settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="invite">Invite</string>
+    <string name="recommend">Recommend</string>
+    <string name="other">Other</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="submit">SUBMIT</string>
+    <string name="empty">_______</string>
+    <string name="ok">ok</string>
+    <string name="add_post">Add post</string>
+    <string name="see_example">see example</string>
+    <string name="customize">Customize</string>
+    <string name="close">CLOSE</string>
+    <string name="reviews_">Reviews</string>
+    <string name="loading">Loading....</string>
+    <string name="please_enter_paybill_name">Please enter paybill name</string>
+
+</resources>

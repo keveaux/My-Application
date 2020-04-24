@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_survey"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space20"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm payment method"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/space20"
+        android:textColor="@color/black"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space20">
+<!--        <RelativeLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment method :"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:gravity="end"
+            />
+        <TextView
+            android:id="@+id/selected_payment_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paybill"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:paddingStart="@dimen/space10"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paybill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space20">
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paybill number :"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:paddingStart="@dimen/space10"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="234321"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:paddingStart="@dimen/space10"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space20">
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account number :"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:gravity="end"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="234321"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:paddingStart="@dimen/space10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tillno_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space20">
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Till number :"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:gravity="end"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="234321"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:paddingStart="@dimen/space10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_no_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space20">
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone number :"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:gravity="end"
+                />
+            <TextView
+                android:id="@+id/pop_up_pno_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="234321"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:paddingStart="@dimen/space10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirm_paybill_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="CONFIRM"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+        android:layoutDirection="rtl"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/space40"
+        android:layout_marginEnd="@dimen/space40"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginBottom="@dimen/space20"
+        android:textSize="12sp"
+
+        />
+
+</LinearLayout>
